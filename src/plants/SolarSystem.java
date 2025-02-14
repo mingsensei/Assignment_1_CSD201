@@ -52,7 +52,7 @@ public class SolarSystem {
         array.printByDiameter();
         
         //Dùng linkedlist xử lý theo AU
-         System.out.println("Use linkedlist: ");
+        System.out.println("Use linkedlist: ");
         LinkedList list = new LinkedList();
         list.insertHead(uranus);
         list.insertHead(mercury);
@@ -68,8 +68,29 @@ public class SolarSystem {
         //sau khi sap xep 
         System.out.println("After sort:");
         list.printBySemiMajor();
+        
+        //Dùng Stack để xử lý
+        System.out.println("Use linkedlist: ");
+        Stack stack = new Stack();
+        stack.push(uranus);
+        stack.push(earth);
+        stack.push(mars);
+        stack.push(jupiter);
+        stack.push(venus);
+        stack.push(saturn);
+        stack.push(neptune);
+        stack.push(mercury);
+        
+        System.out.println("Danh sach cac hanh tinh dung Stack: ");
+        stack.display();
+        System.out.println("Hanh tinh o vtri top: ");
+        stack.peek();
+        System.out.println("Pop stack : "+ stack.pop().toString());
+        System.out.println("Hanh tinh con lai: ");
+        stack.display();
+  
+
+        }
+
     }
-
-}
-
 }
