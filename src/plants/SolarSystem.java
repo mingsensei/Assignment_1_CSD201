@@ -32,7 +32,7 @@ public class SolarSystem {
         tree.insert(neptune);
         System.out.println("Hành tinh theo thứ tự khối lượng:");
         tree.inorder(tree.root);
-        
+        System.out.println();
         //Dùng array để xử lý theo đường kính từ bé đến lớn
         System.out.println("Use array: ");
         Array array = new Array(10);
@@ -51,6 +51,8 @@ public class SolarSystem {
         System.out.println("After sort:");
         array.printByDiameter();
         
+        System.out.println();
+
         //Dùng linkedlist xử lý theo AU
         System.out.println("Use linkedlist: ");
         LinkedList list = new LinkedList();
@@ -68,9 +70,10 @@ public class SolarSystem {
         //sau khi sap xep 
         System.out.println("After sort:");
         list.printBySemiMajor();
-        
+        System.out.println();
+
         //Dùng Stack để xử lý
-        System.out.println("Use linkedlist: ");
+        System.out.println("Use stack: ");
         Stack stack = new Stack();
         stack.push(uranus);
         stack.push(earth);
@@ -88,7 +91,23 @@ public class SolarSystem {
         System.out.println("Pop stack : "+ stack.pop().toString());
         System.out.println("Hanh tinh con lai: ");
         stack.display();
-  
+        System.out.println();
+
+        // Dung linkedlist stack
+        LinkedListStack linkedliststack = new LinkedListStack();
+        linkedliststack.push(earth);
+        linkedliststack.push(mars);
+        linkedliststack.push(jupiter);
+        
+        
+        System.out.println("Displaying stack:");
+        linkedliststack.displayStack();
+        
+        System.out.println("Popping from stack:");
+        System.out.println(stack.pop());
+        
+        System.out.println("Stack after pop operation:");
+        linkedliststack.displayStack();
 
         }
 
