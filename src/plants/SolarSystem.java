@@ -50,6 +50,24 @@ public class SolarSystem {
         //sau khi sap xep 
         System.out.println("After sort:");
         array.printByDiameter();
+        
+        //Dùng linkedlist xử lý theo AU
+         System.out.println("Use linkedlist: ");
+        LinkedList list = new LinkedList();
+        list.insertHead(uranus);
+        list.insertHead(mercury);
+        list.insertHead(earth);
+        list.insertHead(venus);
+        list.insertHead(saturn);
+        list.insertHead(jupiter);
+        list.insertHead(neptune);
+        list.insertHead(mars);
+        //truoc khi sap xep 
+        System.out.println("Before sort:");
+        list.displayList();
+        //sau khi sap xep 
+        System.out.println("After sort:");
+        list.printBySemiMajor();
     }
 
 }
