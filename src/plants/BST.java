@@ -39,6 +39,7 @@ public class BST {
             inorder(current.left);
             System.out.println(current.plant.toString());
             inorder(current.right);
+            
         }
     }
 }

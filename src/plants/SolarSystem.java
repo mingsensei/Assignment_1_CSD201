@@ -19,6 +19,8 @@ public class SolarSystem {
         Plant uranus = new Plant("Uranus",4.007,14.54,19.19,84.02);
         Plant jupiter = new Plant("Jupiter",11.209,317.83,5.20,11.86);
         Plant neptune = new Plant("Neptune",3.883,17.15,30.07,164.79);
+        // Dùng BST để xử lý theo khối lượng từ bé đến lớn
+        System.out.println("Use BST: ");
         BST tree = new BST();
         tree.insert(mercury);
         tree.insert(venus);
@@ -27,10 +29,27 @@ public class SolarSystem {
         tree.insert(jupiter);
         tree.insert(saturn);
         tree.insert(uranus);
-
-
+        tree.insert(neptune);
         System.out.println("Hành tinh theo thứ tự khối lượng:");
         tree.inorder(tree.root);
+        
+        //Dùng array để xử lý theo đường kính từ bé đến lớn
+        System.out.println("Use array: ");
+        Array array = new Array(10);
+        array.insertHead(mercury);
+        array.insertLast(mars);
+        array.insertHead(earth);
+        array.insertLast(venus);
+        array.insertHead(saturn);
+        array.insertLast(jupiter);
+        array.insertHead(uranus);
+        array.insertLast(neptune);
+        //truoc khi sap xep 
+        System.out.println("Before sort:");
+        array.displayArray();
+        //sau khi sap xep 
+        System.out.println("After sort:");
+        array.printByDiameter();
     }
 
 }
